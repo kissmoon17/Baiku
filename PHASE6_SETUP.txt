@@ -1,0 +1,41 @@
+BAIKU — PHASE 6
+Cart + Checkout + Simulated Payment
+
+WHAT WAS ADDED
+- Logged-in customer carts synchronize with cart_items in MySQL.
+- Guest carts remain in localStorage until sign-in.
+- On sign-in, the local cart and saved database cart are merged.
+- Cart quantities are capped by current product stock.
+- Checkout requires an authenticated session.
+- The server reads the authoritative cart from MySQL.
+- The server recalculates prices and totals; the browser cannot choose the order total.
+- Stock is checked and decremented in a database transaction.
+- orders and order_items are created together.
+- cart_items is cleared after a successful order.
+- A simulated payment confirmation modal appears before the order is created.
+- No real card, eSewa, Khalti, or bank transaction occurs.
+- Header account text changes from “Sign in” to the logged-in customer's name and supports sign-out.
+
+DATABASE
+No SQL import is required. The existing baiku2_db schema already contains:
+cart_items, orders, order_items, products, and users.
+
+TEST CHECKLIST
+1. Log in as your Phase 4 customer.
+2. Add products to the cart.
+3. Refresh the page; the cart should remain.
+4. Check phpMyAdmin → baiku2_db → cart_items for the saved rows.
+5. Change quantity/remove an item and confirm the database changes.
+6. Open checkout.html. Customer name/email should be available.
+7. Enter phone, address, city, and optional postal code.
+8. Choose Cash on delivery or Demo card payment.
+9. Click “Review simulated payment”, then “Confirm payment”.
+10. Verify the #BK-#### confirmation.
+11. Check baiku2_db → orders and order_items.
+12. Confirm cart_items is empty for the customer.
+13. Confirm product stock decreased by ordered quantities.
+14. Open admin.php → Orders and verify the new order.
+15. Change the order status and verify it persists.
+
+IMPORTANT
+This is a simulated payment flow for the college project. Do not enter real card numbers or financial credentials.

@@ -1,0 +1,33 @@
+BAIKU PHASE 4 — AUTHENTICATION
+==============================
+
+This version is based on the current baiku2 project and uses the CLEAN
+database:
+
+    baiku2_db
+
+Install:
+1. Back up C:\xampp\htdocs\baiku2
+2. Copy the contents of this folder into C:\xampp\htdocs\baiku2
+3. Do NOT import any SQL again.
+4. Make sure Apache + MySQL are running.
+
+Test:
+    http://localhost/baiku2/test-auth.php
+
+Then:
+    http://localhost/baiku2/login.html
+
+Register a test customer. After success you should be redirected to
+index.html.
+
+Verify the new account in:
+    phpMyAdmin -> baiku2_db -> users
+
+The password column should contain a hash beginning with something like
+$2y$ or $argon2, NOT the plain password.
+
+The login API uses PHP sessions and password_verify().
+
+Do not create an admin account manually by typing a plain password.
+Admin creation/protection will be handled in the next admin phase.
