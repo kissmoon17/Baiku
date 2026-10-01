@@ -1,4 +1,4 @@
-# Baiku: Motorcycle Riding Gear E-commerce
+# [Baiku:](https://baiku.kesug.com/) Motorcycle Riding Gear E-commerce
 
 Baiku is a motorcycle riding gear storefront created as my **5th semester e-commerce project**. It lets customers browse riding gear, manage a cart, create an account, and place orders. The project began as a PHP/MySQL application running locally with XAMPP and was later deployed to InfinityFree, whose PHP hosting model supports the same basic file based application structure.
 
