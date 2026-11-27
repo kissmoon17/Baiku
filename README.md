@@ -1,4 +1,4 @@
-# Baiku: Motorcycle Riding Gear E-commerce
+# Baiku: Motorcycle Riding Gear E-commerce.
 
 **Live demo:** https://baiku.kesug.com/ 
 
